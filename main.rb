@@ -14,7 +14,7 @@ class AFD
     loop do
       c = digito
       case [estado, c]
-##########################  LETRAS
+      ##########################  LETRAS
       in [:q0, '.']
         estado = :q1
       in [:q0, '-']
@@ -132,7 +132,7 @@ class AFD
       in [:q14, ' ']
         @frase << 'O'
         imprime_saida
-        estado = :q0   
+        estado = :q0
       in [:q15, '.']
         estado = :q35
       in [:q15, '-']
@@ -195,7 +195,7 @@ class AFD
         @frase << 'Q'
         imprime_saida
         estado = :q0
-##########################  SEM RESULTADO
+      ##########################  SEM RESULTADO
       in [:q27, '.']
         estado = :q41
       in [:q27, '-']
@@ -208,7 +208,7 @@ class AFD
         estado = :q39
       in [:q30, '-']
         estado = :q40
-##########################  NUMEROS
+      ##########################  NUMEROS
       in [:q31, ' ']
         @frase << '1'
         imprime_saida
@@ -251,14 +251,14 @@ class AFD
         @frase << '0'
         imprime_saida
         estado = :q0
-##########################  SEM RESULTADO
+      ##########################  SEM RESULTADO
       in [:q41, '.']
         estado = :q44
       in [:q42, '-']
         estado = :q45
       in [:q43, '-']
         estado = :q47
-##########################  SIMBOLOS
+      ##########################  SIMBOLOS
       in [:q44, ' ']
         @frase << '?'
         imprime_saida
